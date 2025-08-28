@@ -22,11 +22,11 @@ model/
 │   └── Transformer.py       # Transformer block and Language Model
 |
 ├── training/                # Training utilities
-│   └── Cross_entropy.py # Cross-entropy loss implementation
-│   └── Training.py # cosie annealing schedule and gradient clipping
-|   └── AdamW.py # AdamW implementation
+│   └── Cross_entropy.py     # Cross-entropy loss implementation
+│   └── Training.py          # cosine annealing schedule and gradient clipping
+|   └── AdamW.py             # AdamW implementation
 |
-├── tests/                    # Unit tests (39/39 passed)
+├── tests/                    # Unit tests 
 │
 ├── README.md                 
 ├── pyproject.toml            # Dependencies & metadata
