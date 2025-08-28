@@ -1,12 +1,12 @@
 import torch
 import torch.nn as nn
-from cs336_basics.transformer.RMSNorm import RMSNorm
-from cs336_basics.transformer.Attention import MultiHeadSelfAttention
-from cs336_basics.transformer.SWIGLU import SWIGLU
-from cs336_basics.transformer.RoPE import RoPE
-from cs336_basics.transformer.Embedding import Embedding
-from cs336_basics.transformer.Linear import LinearModule
-from cs336_basics.transformer.Softmax import softmax
+from model.transformer.RMSNorm import RMSNorm
+from model.transformer.Attention import MultiHeadSelfAttention
+from model.transformer.SWIGLU import SWIGLU
+from model.transformer.RoPE import RoPE
+from model.transformer.Embedding import Embedding
+from model.transformer.Linear import LinearModule
+from model.transformer.Softmax import softmax
 
 class TransformerBlock(nn.Module):
  
