@@ -1,16 +1,38 @@
 # A Transformer Implementation from Scratch
 
-This repository contains my implementation of a Transformer from scratch in Pytorch.
-
-As part of a self-study, I followed CS336 — Spring 2025 Assignment 1 instructions (*cs336_spring2025_assignment1_basics.pdf*). Look at section 3 for Transformer instructions.
-
-Every module—linear layers, attention, normalization, and feed-forward—is hand-built using PyTorch nn.Module, without relying on high-level shortcuts.
+This repository contains a minimal from-scratch implementation of the Transformer architecture12 in PyTorch.
 
 
-__The codebase includes extensive inline comments to aid understanding of the Transformer implementation.__
+Every component—linear layers, embeddings, normalization, feed-forward blocks, and attention—was hand-built using torch.nn.Module, without relying on high-level shortcuts. The codebase is designed for clarity and includes extensive inline comments to aid understanding of the Transformer architecture.
+
 
 ![Transformer Architecture](cs336_basics/READMEfigure.jpg)
 
+### Repository structure 
+
+```
+cs336_basics/
+│         
+├── transformer/             # Transformer components
+│   ├── Attention.py         # Scaled Dot-Product attention and Multi-head self attention 
+│   ├── Embedding.py         # Embedding module
+│   ├── Linear.py            # Custom linear layer
+│   ├── RMSNorm.py           # Root Mean Square LayerNorm
+│   ├── SWIGLU.py            # SwiGLU activation
+│   ├── Softmax.py           # Softmax layer
+│   └── Transformer.py       # Transformer block and Language Model
+|
+├── training/                # Training utilities
+│   └── Cross_entropy.py # Cross-entropy loss implementation
+│   └── Training.py # cosie annealing schedule and gradient clipping
+|   └── AdamW.py # AdamW implementation
+|
+├── tests/                    # Unit tests (39/39 passed)
+│
+├── README.md                 
+├── pyproject.toml            # Dependencies & metadata
+└── uv.lock                   # Lockfile for reproducibility          
+```
 
 ### Quick Start
 
@@ -71,3 +93,7 @@ logits = model(x)                       # [2, 12, vocab_size]
 * Add functionnality for config, reading hyper-parameters from a config.
 * Load Llama 3.1 8B parameters checkpoints.
 * Generate tokens from llama 3.1 8B.
+
+
+[^1]: Stanford CS336: Language Modeling from Scratch — Assignment 1 Instructions. Stanford University, 2025. https://stanford-cs336.github.io/spring2025/ ↩
+[^2]: Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., & Polosukhin, I. (2017). Attention Is All You Need. NeurIPS. https://arxiv.org/abs/1706.03762 
