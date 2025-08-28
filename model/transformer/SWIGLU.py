@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 import math 
-from cs336_basics.transformer.Linear import LinearModule
+from model.transformer.Linear import LinearModule
 
 class SWIGLU(nn.Module): 
     '''The Swiglu feed-forward network is composed of a SILU activation function and a GLU'''
