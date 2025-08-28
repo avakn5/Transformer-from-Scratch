@@ -26,11 +26,11 @@ model/
 │   └── Training.py          # cosine annealing schedule and gradient clipping
 |   └── AdamW.py             # AdamW implementation
 |
-├── tests/                    # Unit tests 
+├── tests/                   # Unit tests 
 │
 ├── README.md                 
-├── pyproject.toml            # Dependencies & metadata
-└── uv.lock                   # Lockfile for reproducibility          
+├── pyproject.toml           # Dependencies & metadata
+└── uv.lock                  # Lockfile for reproducibility          
 ```
 
 ### Quick Start
