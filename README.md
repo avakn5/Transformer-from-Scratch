@@ -1,7 +1,6 @@
 # A Transformer Implementation from Scratch
 
-This repository contains a minimal from-scratch implementation of the Transformer architecture12 in PyTorch.
-
+This repository contains a minimal from-scratch implementation of the Transformer architecture12 in PyTorch[^1][^2].
 
 Every component—linear layers, embeddings, normalization, feed-forward blocks, and attention—was hand-built using torch.nn.Module, without relying on high-level shortcuts. The codebase is designed for clarity and includes extensive inline comments to aid understanding of the Transformer architecture.
 
