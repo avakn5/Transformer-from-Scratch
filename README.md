@@ -5,7 +5,7 @@ This repository contains a minimal from-scratch implementation of the Transforme
 Every component—linear layers, embeddings, normalization, feed-forward blocks, and attention—was hand-built using torch.nn.Module, without relying on high-level shortcuts. The codebase is designed for clarity and includes extensive inline comments to aid understanding of the Transformer architecture.
 
 
-![Transformer Architecture](cs336_basics/READMEfigure.jpg)
+![Transformer Architecture](model/READMEfigure.jpg)
 
 ### Repository structure 
 
