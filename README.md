@@ -10,7 +10,7 @@ Every component—linear layers, embeddings, normalization, feed-forward blocks,
 ### Repository structure 
 
 ```
-cs336_basics/
+model/
 │         
 ├── transformer/             # Transformer components
 │   ├── Attention.py         # Scaled Dot-Product attention and Multi-head self attention 
@@ -38,16 +38,16 @@ cs336_basics/
 Setup 
 
 ```
-git clone https://github.com/avakn5/cs336_basics && cd cs336_basics
+git clone https://github.com/avakn5/Transformer-from-Scratch.git && cd model
 pip install -e .
 ```
 
 Run the transformer
 ```
 import torch
-from cs336_basics.transformer.Transformer import TransformerLM
+from model.transformer.Transformer import TransformerLM
 
-model = TransformerLM(
+model_run = TransformerLM(
     vocab_size=10_000,
     context_length=16,
     num_layers=3,
@@ -57,7 +57,7 @@ model = TransformerLM(
     num_heads=4,
 )
 x = torch.randint(0, 10_000, (2, 12))   # [batch=2, seq=12]
-logits = model(x)                       # [2, 12, vocab_size]
+logits = model_run(x)                       # [2, 12, vocab_size]
 ```
 
 ### STEPS to the Transformer implementation from scratch (sequential implementation):
