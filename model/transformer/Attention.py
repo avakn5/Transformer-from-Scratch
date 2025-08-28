@@ -1,8 +1,8 @@
 import torch, math
 import torch.nn as nn
-from cs336_basics.transformer.Softmax import softmax
-from cs336_basics.transformer.RoPE import RoPE
-from cs336_basics.transformer.Linear import LinearModule
+from model.transformer.Softmax import softmax
+from model.transformer.RoPE import RoPE
+from model.transformer.Linear import LinearModule
 
 class ScaledDotProductAttention(nn.Module): 
     '''
